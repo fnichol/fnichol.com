@@ -1,0 +1,10 @@
+# Documentation: https://www.netlify.com/docs/netlify-toml-reference/
+
+[build]
+publish = "public"
+command = "hugo --gc --minify --enableGitInfo --baseURL $DEPLOY_PRIME_URL"
+
+[build.environment]
+HUGO_VERSION = "0.57.2"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
