@@ -2,7 +2,7 @@
 
 [build]
 publish = "public"
-command = "hugo --gc --minify --enableGitInfo --baseURL $DEPLOY_PRIME_URL"
+command = "hugo --gc --minify --enableGitInfo"
 
 [build.environment]
 HUGO_VERSION = "0.57.2"
