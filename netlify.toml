@@ -8,3 +8,6 @@ command = "hugo --gc --minify --enableGitInfo"
 HUGO_VERSION = "0.57.2"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
+
+[context.deploy-preview]
+command = "hugo --gc --minify --enableGitInfo --buildFuture --baseURL $DEPLOY_PRIME_URL"
