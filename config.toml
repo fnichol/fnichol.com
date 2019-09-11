@@ -1,4 +1,12 @@
 baseURL = "https://fnichol.com/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Fletcher Nichol"
+googleAnalytics = "TODO UA"
+
 theme = "pickles"
+
+[params]
+# This will be the canonical "production" base URL for the site. If a `baseURL`
+# is not equal to this value, then it will not be considered a production
+# build/deployment.
+ProdURL = "https://fnichol.com/"
