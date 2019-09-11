@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{ hugo.Generator }}
+    <link rel="canonical" href="{{ .Site.BaseURL }}">
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    {{ $tach := resources.Get "css/vendor/tachyons-4.11.1.css" -}}
+    {{ $maincss := resources.Get "css/main.css" -}}
+    {{ $css := slice $tach $maincss | resources.Concat "css/style.css" | minify | fingerprint -}}
+    <link
+      rel="stylesheet"
+      href="{{ $css.RelPermalink }}"
+      integrity="{{ $css.Data.Integrity }}"
+    />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    {{ "<!--[if IE]>" | safeHTML }}
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    {{ "<! [endif]-->" | safeHTML }}
+    {{ block "main" . }}
+    {{ end -}}
+
+    {{ $mod := resources.Get "js/vendor/modernizr-3.7.1.min.js" }}
+    {{ $mainjs := resources.Get "js/main.js" -}}
+    {{ $js := slice $mod $mainjs | resources.Concat "js/bundle.js" | minify | fingerprint }}
+    <script
+      src="{{ $js.RelPermalink }}"
+      integrity="{{ $js.Data.Integrity }}"
+    ></script>
+    {{ partial "body/google-analytics.html" . -}}
+  </body>
+</html>
