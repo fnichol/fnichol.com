@@ -1,7 +1,7 @@
 baseURL = "https://fnichol.com/"
 languageCode = "en-us"
 title = "Fletcher Nichol"
-googleAnalytics = "TODO UA"
+googleAnalytics = "UA-147748480-1"
 
 theme = "pickles"
 
