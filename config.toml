@@ -2,6 +2,7 @@ baseURL = "https://fnichol.com/"
 languageCode = "en-us"
 title = "Fletcher Nichol"
 googleAnalytics = "UA-147748480-1"
+enableGitInfo = true
 
 theme = "pickles"
 
