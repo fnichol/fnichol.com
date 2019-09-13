@@ -53,8 +53,9 @@ experience:
     description: |
       Delivered cloud and infrastructure automation consulting, training, and
       solutions to organizations ranging from single person startups to members
-      of Global 500 as part of a small collegial team. Wrote, collaborated on,
-      and contributed to many open-source projects in service of client work.
+      of the Global 500 as part of a small collegial team. Produced,
+      collaborated on, and contributed to many open-source projects in service
+      of client work.
 
       Technologies: Ruby, Shell, Chef, Test Kitchen, Cloud Formation, AWS,
       Vagrant, Docker
@@ -68,8 +69,8 @@ experience:
       href: https://web.archive.org/web/20150106082348/https://www.bluebox.net/
     description: |
       Wrote and contributed a Chef integration to Puppet's open-source Razor
-      project. Wrote a bare metal provisioning service which provisioned and
-      initialized infrastructure for customers via an API.
+      project. Developed a bare metal provisioning service which provisioned
+      and initialized infrastructure for customers via an API.
 
       Technologies: Ruby, Chef, Shell, Puppet Razor, OpenStack, Test Kitchen
   - start_date: 2011-10-01
@@ -82,8 +83,8 @@ experience:
     description: |
       Architected and deployed a cloud-based infrastructure powered by Chef to
       manage web services infrastructure. Consistently delivered web-based
-      projects to business units in a team environment using a Agile
-      methodology.
+      projects to business units in a team environment using Agile
+      methodologies.
 
       Technologies: Ruby, Chef, Ruby on Rails, Capistrano, Git, Vagrant
   - start_date: 2009-08-01
@@ -95,9 +96,9 @@ experience:
       href: https://www.macewan.ca
     description: |
       Built several integration services to bridge legacy services to new and
-      upgraded systems. Redesigned and reimplemented MacEwan's application
-      interface to support PeopleSoft using Ruby on Rails. Wrote a service with
-      Grails that allowed instructors to post class cancellations.
+      upgraded systems. Redesigned and reimplemented MacEwan's student
+      application interface to support PeopleSoft using Ruby on Rails. Wrote a
+      service with Grails that allowed instructors to post class cancellations.
 
       Technologies: Java, Ruby, Groovy, Ruby on Rails, Grails, Sinatra,
       Capistrano, Chef, Mercurial
