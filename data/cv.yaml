@@ -96,7 +96,7 @@ experience:
       href: https://www.macewan.ca
     description: |
       Built several integration services to bridge legacy services to new and
-      upgraded systems. Redesigned and reimplemented MacEwan's student
+      upgraded systems. Redesigned and re-implemented MacEwan's student
       application interface to support PeopleSoft using Ruby on Rails. Wrote a
       service with Grails that allowed instructors to post class cancellations.
 
