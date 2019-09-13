@@ -1,0 +1,216 @@
+{{- define "main" -}}
+{{ partial "cv/sprite-symbol.svg" . }}
+
+<div id="cv" class="sans-serif mw8 pa3 center">
+  <div class="cf">
+    <h1 class="fl-ns w-100 w-two-thirds-ns f-subheadline-ns f1 mt0 mt3-ns">
+      <div class="pink">Fletcher Nichol</div>
+      <div class="f2 f2-ns db">Software Developer</div>
+    </h1>
+    <div class="fr-ns w-100 w-third-ns mt0 mt3-ns tr-ns">
+      <ul class="list pl0 pl3-m pl5-l lh-copy">
+        {{ range ($.Site.Data.cv.links | append .Page.Permalink) }}
+        <li class="pa0">
+          <a href="{{ . }}" class="link pink dim">
+            <span class="dn-ns">
+              <svg class="pr1 h1 w1 v-mid">
+                <use xlink:href="#external-link"></use>
+              </svg>
+            </span>
+            {{ replaceRE "/$" "" (replaceRE "^(https?://(www.)?|mailto:)" "" .) }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+  <section id="interest" class="">
+    <h2 class="pink">Areas of Interest</h2>
+    <ul class="list cf mw8 pl0 pl3-m pl5-l">
+    {{ range $.Site.Data.cv.interests }}
+      <li class="fl w-100 w-third-ns pa2">{{ .}}</li>
+    {{ end }}
+    </ul>
+  </section>
+  <section id="experience" class="">
+    <h2 class="pink">Experience</h2>
+    <ul class="list mw8 pl0 pl3-m pl5-l lh-copy">
+    {{ range $.Site.Data.cv.experience }}
+      <li class="cf bt bn-ns b--black-10 mv4 mv1-ns">
+        <div class="fl w-100 w-third-ns pa2">
+          <h3 class="f5 lh-title mt0 mb3">{{ .company }}</h3>
+          <p class="date mb1 o-50 i">
+            {{ with .start_date }}{{ dateFormat "January 2006" . -}}
+            {{ else }}<b>TODO</b>{{ end }}
+            to
+            {{ with .end_date }}{{ dateFormat "January 2006" . -}}
+            {{ else }}Present{{ end }}
+          </p>
+        </div>
+        <div class="fl w-100 w-two-thirds-ns pa2">
+          <h4 class="f5 lh-title mt0 mb3">{{ .title }}</h4>
+          <p class="description">
+            {{ .description | markdownify }}
+          </p>
+          <div class="location">
+            <span class="nowrap pink">
+              <span>
+                <svg class="pr1 h1 w1 v-mid">
+                  <use xlink:href="#map-pin"></use>
+                </svg>
+              </span>
+              {{ .location }}
+            </span>
+            {{ with .url }}
+              {{ $href := .href }}
+              {{ $title := cond (isset . "title") .title $href }}
+              <span>|</span>
+              <span class="nowrap">
+                <a href="{{ $href }}" target="_blank" class="pink link underline-hover dim">
+                  <span>
+                    <svg class="pr1 h1 w1 v-mid">
+                      <use xlink:href="#external-link"></use>
+                    </svg>
+                  </span>
+                  {{ replaceRE "/$" "" (replaceRE "^(https?://(www.)?|mailto:)" "" $title) }}
+                </a>
+              </span>
+            {{ end }}
+          </div>
+        </div>
+      </li>
+    {{ end }}
+    </ul>
+  </section>
+  <section id="education" class="">
+    <h2 class="pink">Education</h2>
+    <ul class="list mw8 pl0 pl3-m pl5-l lh-copy">
+    {{ range $.Site.Data.cv.education }}
+      <li class="cf bt bn-ns b--black-10 mv4 mv1-ns">
+        <div class="fl w-100 w-third-ns pa2">
+          <h3 class="f5 lh-title mt0 mb3">{{ .school }}</h3>
+          <p class="date mb1 o-50 i">{{ .date  }}</p>
+        </div>
+        <div class="fl w-100 w-two-thirds-ns pa2">
+          <h4 class="degree f5 lh-title mt0 mb3">{{ .degree }}</h4>
+          <p class="description">{{ .description | markdownify }}</p>
+          <div class="location">
+            <span class="nowrap pink">
+              <span>
+                <svg class="pr1 h1 w1 v-mid">
+                  <use xlink:href="#map-pin"></use>
+                </svg>
+              </span>
+              {{ .location }}
+            </span>
+            {{ with .url }}
+              {{ $href := .href }}
+              {{ $title := cond (isset . "title") .title $href }}
+              <span>|</span>
+              <span class="nowrap">
+                <a href="{{ $href }}" target="_blank" class="link pink dim">
+                  <span>
+                    <svg class="pr1 h1 w1 v-mid">
+                      <use xlink:href="#external-link"></use>
+                    </svg>
+                  </span>
+                  {{ replaceRE "/$" "" (replaceRE "^(https?://(www.)?|mailto:)" "" $title) }}
+                </a>
+              </span>
+            {{ end }}
+          </div>
+        </div>
+      </li>
+    {{ end }}
+    </ul>
+  </section>
+  <section id="patents" class="">
+    <h2 class="pink">Patents</h2>
+    <ul class="list pl0 pl3-m pl5-l lh-copy">
+    {{ range $.Site.Data.cv.patents }}
+      <li class="cf bt bn-ns b--black-10 mv4 mv1-ns">
+        <div class="fl w-100 w-third-ns pa2">
+          <h3 class="f5 lh-title mt0 mb3">{{ .application }}</h3>
+          <p class="year mb1 o-50 i">{{ dateFormat "2006" .year  }}</p>
+        </div>
+        <div class="fl w-100 w-two-thirds-ns pa2">
+          <h4 class="f5 lh-title mt0 mb3">{{ .title }}</h4>
+          <p class="description">
+            {{ .description | markdownify }}
+          </p>
+          <div class="location">
+            <span class="nowrap pink">
+              <span>
+                <svg class="pr1 h1 w1 v-mid">
+                  <use xlink:href="#map-pin"></use>
+                </svg>
+              </span>
+              {{ .location }}
+            </span>
+            {{ with .url }}
+              {{ $href := .href }}
+              {{ $title := cond (isset . "title") .title $href }}
+              <span>|</span>
+              <span class="nowrap">
+                <a href="{{ $href }}" target="_blank" class="link pink dim">
+                  <span>
+                    <svg class="pr1 h1 w1 v-mid">
+                      <use xlink:href="#external-link"></use>
+                    </svg>
+                  </span>
+                  {{ replaceRE "/$" "" (replaceRE "^(https?://(www.)?|mailto:)" "" $title) }}
+                </a>
+              </span>
+            {{ end }}
+          </div>
+        </div>
+      </li>
+    {{ end }}
+    </ul>
+  </section>
+  <section id="awards" class="">
+    <h2 class="pink">Awards</h2>
+    <ul class="list pl0 pl3-m pl5-l lh-copy">
+    {{ range $.Site.Data.cv.awards }}
+      <li class="cf bt bn-ns b--black-10 mv4 mv1-ns">
+        <div class="fl w-100 w-third-ns pa2">
+          <h3 class="f5 lh-title mt0 mb3">{{ .event }}</h3>
+          <p class="year mb1 o-50 i">{{ dateFormat "2006" .year  }}</p>
+        </div>
+        <div class="fl w-100 w-two-thirds-ns pa2">
+          <h4 class="f5 lh-title mt0 mb3">{{ .title }}</h4>
+          <p class="description">
+            {{ .description | markdownify }}
+          </p>
+          <div class="location">
+            <span class="nowrap pink">
+              <span>
+                <svg class="pr1 h1 w1 v-mid">
+                  <use xlink:href="#map-pin"></use>
+                </svg>
+              </span>
+              {{ .location }}
+            </span>
+            {{ with .url }}
+              {{ $href := .href }}
+              {{ $title := cond (isset . "title") .title $href }}
+              <span>|</span>
+              <span class="nowrap">
+                <a href="{{ $href }}" target="_blank" class="link pink dim">
+                  <span>
+                    <svg class="pr1 h1 w1 v-mid">
+                      <use xlink:href="#external-link"></use>
+                    </svg>
+                  </span>
+                  {{ replaceRE "/$" "" (replaceRE "^(https?://(www.)?|mailto:)" "" $title) }}
+                </a>
+              </span>
+            {{ end }}
+          </div>
+        </div>
+      </li>
+    {{ end }}
+    </ul>
+  </section>
+</div>
+{{- end -}}

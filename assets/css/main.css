@@ -1,3 +1,6 @@
-.fnichol {
-  width: 100%;
+#cv blockquote {
+  border-left: thin solid rgba(0, 0, 0, 0.1);
+  margin-left: 0;
+  padding-left: 1rem;
+  font-style: italic;
 }

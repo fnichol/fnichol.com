@@ -1,0 +1,18 @@
+<!--
+Original sources from: https://feathericons.com/ v4.24.0
+Converted by hand into an SVG sprite with: https://svgsprit.es/
+
+More info:
+- https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/
+- https://www.adamwills.io/blog/discovering-hugo-2-workflow/
+-->
+<svg style="display:none;">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="map-pin">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+    <circle cx="12" cy="10" r="3"></circle>
+  </symbol>
+
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="external-link">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3"></path>
+  </symbol>
+</svg>

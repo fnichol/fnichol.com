@@ -1,0 +1,199 @@
+# @format
+
+links:
+  - mailto:fnichol-resume@nichol.ca
+  - https://www.linkedin.com/in/fnichol
+  - https://github.com/fnichol
+
+interests:
+  - Systems programming
+  - Distributed systems
+  - Services at scale
+  - Developer workflow tooling
+  - Open source development
+  - Product engineering
+
+education:
+  - date: June 2003
+    degree: B.Sc. Specialization in Computing Science, Minor in Business
+    school: University of Alberta
+    location: Edmonton, Canada
+    url:
+      href: https://www.ualberta.ca
+    description:
+      Specialized in software engineering, networking, database design and
+      computer architecture. Business studies including leadership/management
+      skills, and operations management.
+
+experience:
+  - start_date: 2014-12-01
+    end_date: 2019-03-01
+    title: Principal Software Engineer
+    company: Chef Software
+    location: Distributed Team
+    url:
+      href: https://www.chef.io
+    description: |
+      Continued stewardship and feature work on the Test Kitchen project
+      delivering first class Windows support. Lead a team working exclusively
+      on open-source projects and tools. Co-authored the Habitat project, which
+      is largely written in Rust and concerns process supervision, distributed
+      systems, and service choreography. Primarily responsible for Habitat's
+      packaging system design and implementation.
+
+      Technologies: Rust, Shell, Ruby, PowerShell, Docker, SQL, AWS, C, Test
+      Kitchen, Kubernetes
+  - start_date: 2013-10-01
+    end_date: 2014-11-01
+    title: Software Engineer
+    company: Heavy Water Operations
+    location: Distributed Team
+    url:
+      href: http://www.heavywater.io
+    description: |
+      Delivered cloud and infrastructure automation consulting, training, and
+      solutions to organizations ranging from single person startups to members
+      of Global 500 as part of a small collegial team. Wrote, collaborated on,
+      and contributed to many open-source projects in service of client work.
+
+      Technologies: Ruby, Shell, Chef, Test Kitchen, Cloud Formation, AWS,
+      Vagrant, Docker
+  - start_date: 2012-09-01
+    end_date: 2013-09-01
+    title: Senior Software Engineer
+    company: Blue Box Group
+    location: Distributed Team
+    url:
+      title: bluebox.net
+      href: https://web.archive.org/web/20150106082348/https://www.bluebox.net/
+    description: |
+      Wrote and contributed a Chef integration to Puppet's open-source Razor
+      project. Wrote a bare metal provisioning service which provisioned and
+      initialized infrastructure for customers via an API.
+
+      Technologies: Ruby, Chef, Shell, Puppet Razor, OpenStack, Test Kitchen
+  - start_date: 2011-10-01
+    end_date: 2012-08-01
+    title: Web Developer
+    company: Alberta Motor Association
+    location: Edmonton, Canada
+    url:
+      href: https://ama.ab.ca
+    description: |
+      Architected and deployed a cloud-based infrastructure powered by Chef to
+      manage web services infrastructure. Consistently delivered web-based
+      projects to business units in a team environment using a Agile
+      methodology.
+
+      Technologies: Ruby, Chef, Ruby on Rails, Capistrano, Git, Vagrant
+  - start_date: 2009-08-01
+    end_date: 2011-10-01
+    title: Java Developer
+    company: MacEwan University
+    location: Edmonton, Canada
+    url:
+      href: https://www.macewan.ca
+    description: |
+      Built several integration services to bridge legacy services to new and
+      upgraded systems. Redesigned and reimplemented MacEwan's application
+      interface to support PeopleSoft using Ruby on Rails. Wrote a service with
+      Grails that allowed instructors to post class cancellations.
+
+      Technologies: Java, Ruby, Groovy, Ruby on Rails, Grails, Sinatra,
+      Capistrano, Chef, Mercurial
+  - start_date: 2007-01-01
+    end_date: 2009-07-01
+    title: Programmer Analyst
+    company: The Alberta Library
+    location: Edmonton, Canada
+    url:
+      href: http://thealbertalibrary.ca
+    description: |
+      Built a federated digital object repository discovery portal which
+      indexed over 170,000 objects from libraries, museums, and universities
+      across Alberta. Helped plan the hardware architecture and execute
+      deployment of a Sun Microsystems Center of Excellence.
+
+      Technologies: Java, HTML, CSS, Shell, MySQL, Mercurial, Hudson/Jenkins,
+      Solaris, Tomcat
+  - start_date: 2004-10-01
+    end_date: 2007-01-01
+    title:
+      E-Learning Systems Administrator, Academic Information and Communication
+      Technologies
+    company: University of Alberta
+    location: Edmonton, Canada
+    url:
+      href: https://www.ualberta.ca
+    description: |
+      Shared system administration responsibilities for servers in the
+      E-Learning production domain, ensuring full availability of mission
+      critical systems such as WebCT and Elluminate Live!.
+
+      Technologies: Java, MySQL, WebCT, Elluminate Live!, PeopleSoft, Oracle,
+      Solaris, OpenBSD, DocBook, CVS
+  - start_date: 2003-05-01
+    end_date: 2004-10-01
+    title: Senior Help Desk Analyst/Developer, Computing and Network Services
+    company: University of Alberta
+    location: Edmonton, Canada
+    url:
+      href: https://www.ualberta.ca
+    description: |
+      Produced two annual CD-ROM/web bundles facilitating internet connectivity
+      on campus.
+
+      Technologies: PHP, Perl, Director, JavaScript, InstallShield, Shell, Batch
+  - start_date: 2000-01-01
+    end_date: 2000-12-01
+    title: Introductory Java Lab Instructor, Department of Computing Science
+    company: University of Alberta
+    location: Edmonton, Canada
+    url:
+      href: https://www.ualberta.ca
+    description: |
+      Led instruction of weekly labs to a class of 30 to 40 students, answered
+      questions, marked weekly homework, semester projects, and lab exams.
+
+      Technologies: Java, CodeWarrior, Shell
+  - start_date: 1999-12-01
+    end_date: 2003-05-01
+    title: Help Desk Analyst, Computing and Network Services
+    company: University of Alberta
+    location: Edmonton, Canada
+    url:
+      href: https://www.ualberta.ca
+    description: |
+      Provided support for University staff and students on a variety of
+      computer related questions and problems across Windows, Unix and
+      Macintosh operating systems.
+
+      Technologies: Perl, PHP, MySQL, Shell, AppleScript
+
+patents:
+  - year: 2016-01-01
+    application: US20170351868A1
+    title: Choreographed distributed execution of programs
+    location: United States
+    url:
+      title: patents.google.com
+      href: https://patents.google.com/patent/US20170351868A1/fr
+    description: |
+      > "Techniques are described for managing creation and/or execution of
+      distributed programs, such as for a group of multiple interrelated
+      programs that are part of a service-oriented architecture or that
+      otherwise interact during execution to provide a desired type of
+      functionality."
+
+awards:
+  - year: 2013-01-01
+    event: ChefConf 2013
+    title: Awesome Community Chef
+    location: San Francisco, United States
+    url:
+      title: blog.chef.io
+      href: https://blog.chef.io/2013/05/07/awesome-community-chefs/
+    description: |
+      > "Jamie/Test Kitchen 1.0, Knife-Server, Chef integration for Razor,
+      rbenv/rvm cookbooks and more! Fletcher has earned the moniker 'the
+      hardest working man in open source.'"
