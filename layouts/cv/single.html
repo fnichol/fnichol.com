@@ -9,7 +9,7 @@
     </h1>
     <div class="fr-ns w-100 w-third-ns mt0 mt3-ns tr-ns">
       <ul class="list pl0 pl3-m pl5-l lh-copy">
-        {{ range ($.Site.Data.cv.links | append .Page.Permalink) }}
+        {{- range ($.Site.Data.cv.links | append .Page.Permalink) }}
         <li class="pa0">
           <a href="{{ . }}" class="link pink dim">
             <span class="dn-ns">
@@ -20,22 +20,22 @@
             {{ replaceRE "/$" "" (replaceRE "^(https?://(www.)?|mailto:)" "" .) }}
           </a>
         </li>
-        {{ end }}
+        {{- end }}
       </ul>
     </div>
   </div>
   <section id="interest" class="">
     <h2 class="pink">Areas of Interest</h2>
     <ul class="list cf mw8 pl0 pl3-m pl5-l">
-    {{ range $.Site.Data.cv.interests }}
-      <li class="fl w-100 w-third-ns pa2">{{ .}}</li>
-    {{ end }}
+    {{- range $.Site.Data.cv.interests }}
+      <li class="fl w-100 w-third-ns pa2">{{ . }}</li>
+    {{- end }}
     </ul>
   </section>
   <section id="experience" class="">
     <h2 class="pink">Experience</h2>
     <ul class="list mw8 pl0 pl3-m pl5-l lh-copy">
-    {{ range $.Site.Data.cv.experience }}
+    {{- range $.Site.Data.cv.experience }}
       <li class="cf bt bn-ns b--black-10 mv4 mv1-ns">
         <div class="fl w-100 w-third-ns pa2">
           <h3 class="f5 lh-title mt0 mb3">{{ .company }}</h3>
@@ -79,13 +79,13 @@
           </div>
         </div>
       </li>
-    {{ end }}
+    {{- end }}
     </ul>
   </section>
   <section id="education" class="">
     <h2 class="pink">Education</h2>
     <ul class="list mw8 pl0 pl3-m pl5-l lh-copy">
-    {{ range $.Site.Data.cv.education }}
+    {{- range $.Site.Data.cv.education }}
       <li class="cf bt bn-ns b--black-10 mv4 mv1-ns">
         <div class="fl w-100 w-third-ns pa2">
           <h3 class="f5 lh-title mt0 mb3">{{ .school }}</h3>
@@ -121,13 +121,13 @@
           </div>
         </div>
       </li>
-    {{ end }}
+    {{- end }}
     </ul>
   </section>
   <section id="patents" class="">
     <h2 class="pink">Patents</h2>
     <ul class="list pl0 pl3-m pl5-l lh-copy">
-    {{ range $.Site.Data.cv.patents }}
+    {{- range $.Site.Data.cv.patents }}
       <li class="cf bt bn-ns b--black-10 mv4 mv1-ns">
         <div class="fl w-100 w-third-ns pa2">
           <h3 class="f5 lh-title mt0 mb3">{{ .application }}</h3>
@@ -165,13 +165,13 @@
           </div>
         </div>
       </li>
-    {{ end }}
+    {{- end }}
     </ul>
   </section>
   <section id="awards" class="">
     <h2 class="pink">Awards</h2>
     <ul class="list pl0 pl3-m pl5-l lh-copy">
-    {{ range $.Site.Data.cv.awards }}
+    {{- range $.Site.Data.cv.awards }}
       <li class="cf bt bn-ns b--black-10 mv4 mv1-ns">
         <div class="fl w-100 w-third-ns pa2">
           <h3 class="f5 lh-title mt0 mb3">{{ .event }}</h3>
@@ -209,7 +209,7 @@
           </div>
         </div>
       </li>
-    {{ end }}
+    {{- end }}
     </ul>
   </section>
 </div>
