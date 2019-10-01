@@ -4,8 +4,8 @@
 <div id="cv" class="sans-serif mw8 pa3 center">
   <div class="cf">
     <h1 class="fl-ns w-100 w-two-thirds-ns f-subheadline-ns f1 mt0 mt3-ns">
-      <div class="pink">Fletcher Nichol</div>
-      <div class="f2 f2-ns db">Software Developer</div>
+      <span class="pink">Fletcher Nichol</span>
+      <span class="f2 f2-ns db">Software Developer</span>
     </h1>
     <div class="fr-ns w-100 w-third-ns mt0 mt3-ns tr-ns">
       <ul class="list pl0 pl3-m pl5-l lh-copy">
@@ -49,9 +49,9 @@
         </div>
         <div class="fl w-100 w-two-thirds-ns pa2">
           <h4 class="f5 lh-title mt0 mb3">{{ .title }}</h4>
-          <p class="description">
+          <div class="description">
             {{ .description | markdownify }}
-          </p>
+          </div>
           <div class="location">
             <span class="nowrap pink">
               <span>
@@ -93,7 +93,9 @@
         </div>
         <div class="fl w-100 w-two-thirds-ns pa2">
           <h4 class="degree f5 lh-title mt0 mb3">{{ .degree }}</h4>
-          <p class="description">{{ .description | markdownify }}</p>
+          <div class="description">
+            {{ .description | markdownify }}
+          </div>
           <div class="location">
             <span class="nowrap pink">
               <span>
@@ -135,9 +137,9 @@
         </div>
         <div class="fl w-100 w-two-thirds-ns pa2">
           <h4 class="f5 lh-title mt0 mb3">{{ .title }}</h4>
-          <p class="description">
+          <div class="description">
             {{ .description | markdownify }}
-          </p>
+          </div>
           <div class="location">
             <span class="nowrap pink">
               <span>
@@ -179,9 +181,9 @@
         </div>
         <div class="fl w-100 w-two-thirds-ns pa2">
           <h4 class="f5 lh-title mt0 mb3">{{ .title }}</h4>
-          <p class="description">
+          <div class="description">
             {{ .description | markdownify }}
-          </p>
+          </div>
           <div class="location">
             <span class="nowrap pink">
               <span>
