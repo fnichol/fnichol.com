@@ -61,21 +61,21 @@
               </span>
               {{ .location }}
             </span>
-            {{ with .url }}
-              {{ $href := .href }}
-              {{ $title := cond (isset . "title") .title $href }}
-              <span>|</span>
-              <span class="nowrap">
-                <a href="{{ $href }}" target="_blank" class="pink link underline-hover dim">
-                  <span>
-                    <svg class="pr1 h1 w1 v-mid">
-                      <use xlink:href="#external-link"></use>
-                    </svg>
-                  </span>
-                  {{ replaceRE "/$" "" (replaceRE "^(https?://(www.)?|mailto:)" "" $title) }}
-                </a>
-              </span>
-            {{ end }}
+          {{- with .url }}
+            {{- $href := .href }}
+            {{- $title := cond (isset . "title") .title $href }}
+            <span>|</span>
+            <span class="nowrap">
+              <a href="{{ $href }}" target="_blank" class="pink link underline-hover dim">
+                <span>
+                  <svg class="pr1 h1 w1 v-mid">
+                    <use xlink:href="#external-link"></use>
+                  </svg>
+                </span>
+                {{ replaceRE "/$" "" (replaceRE "^(https?://(www.)?|mailto:)" "" $title) }}
+              </a>
+            </span>
+          {{- end }}
           </div>
         </div>
       </li>
@@ -105,21 +105,21 @@
               </span>
               {{ .location }}
             </span>
-            {{ with .url }}
-              {{ $href := .href }}
-              {{ $title := cond (isset . "title") .title $href }}
-              <span>|</span>
-              <span class="nowrap">
-                <a href="{{ $href }}" target="_blank" class="link pink dim">
-                  <span>
-                    <svg class="pr1 h1 w1 v-mid">
-                      <use xlink:href="#external-link"></use>
-                    </svg>
-                  </span>
-                  {{ replaceRE "/$" "" (replaceRE "^(https?://(www.)?|mailto:)" "" $title) }}
-                </a>
-              </span>
-            {{ end }}
+          {{- with .url }}
+            {{- $href := .href }}
+            {{- $title := cond (isset . "title") .title $href }}
+            <span>|</span>
+            <span class="nowrap">
+              <a href="{{ $href }}" target="_blank" class="link pink dim">
+                <span>
+                  <svg class="pr1 h1 w1 v-mid">
+                    <use xlink:href="#external-link"></use>
+                  </svg>
+                </span>
+                {{ replaceRE "/$" "" (replaceRE "^(https?://(www.)?|mailto:)" "" $title) }}
+              </a>
+            </span>
+          {{- end }}
           </div>
         </div>
       </li>
@@ -149,21 +149,21 @@
               </span>
               {{ .location }}
             </span>
-            {{ with .url }}
-              {{ $href := .href }}
-              {{ $title := cond (isset . "title") .title $href }}
-              <span>|</span>
-              <span class="nowrap">
-                <a href="{{ $href }}" target="_blank" class="link pink dim">
-                  <span>
-                    <svg class="pr1 h1 w1 v-mid">
-                      <use xlink:href="#external-link"></use>
-                    </svg>
-                  </span>
-                  {{ replaceRE "/$" "" (replaceRE "^(https?://(www.)?|mailto:)" "" $title) }}
-                </a>
-              </span>
-            {{ end }}
+          {{- with .url }}
+            {{- $href := .href }}
+            {{- $title := cond (isset . "title") .title $href }}
+            <span>|</span>
+            <span class="nowrap">
+              <a href="{{ $href }}" target="_blank" class="link pink dim">
+                <span>
+                  <svg class="pr1 h1 w1 v-mid">
+                    <use xlink:href="#external-link"></use>
+                  </svg>
+                </span>
+                {{ replaceRE "/$" "" (replaceRE "^(https?://(www.)?|mailto:)" "" $title) }}
+              </a>
+            </span>
+          {{- end }}
           </div>
         </div>
       </li>
@@ -193,21 +193,21 @@
               </span>
               {{ .location }}
             </span>
-            {{ with .url }}
-              {{ $href := .href }}
-              {{ $title := cond (isset . "title") .title $href }}
-              <span>|</span>
-              <span class="nowrap">
-                <a href="{{ $href }}" target="_blank" class="link pink dim">
-                  <span>
-                    <svg class="pr1 h1 w1 v-mid">
-                      <use xlink:href="#external-link"></use>
-                    </svg>
-                  </span>
-                  {{ replaceRE "/$" "" (replaceRE "^(https?://(www.)?|mailto:)" "" $title) }}
-                </a>
-              </span>
-            {{ end }}
+          {{- with .url }}
+            {{- $href := .href }}
+            {{- $title := cond (isset . "title") .title $href }}
+            <span>|</span>
+            <span class="nowrap">
+              <a href="{{ $href }}" target="_blank" class="link pink dim">
+                <span>
+                  <svg class="pr1 h1 w1 v-mid">
+                    <use xlink:href="#external-link"></use>
+                  </svg>
+                </span>
+                {{ replaceRE "/$" "" (replaceRE "^(https?://(www.)?|mailto:)" "" $title) }}
+              </a>
+            </span>
+          {{- end }}
           </div>
         </div>
       </li>
