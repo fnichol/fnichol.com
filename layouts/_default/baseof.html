@@ -2,7 +2,11 @@
 <html class="no-js" lang="{{ .Site.LanguageCode }}">
   <head>
     <meta charset="utf-8" />
+  {{- with .Title }}
+    <title>{{ . }}</title>
+  {{- else }}
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  {{- end }}
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {{ hugo.Generator }}
