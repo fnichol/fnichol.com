@@ -26,6 +26,20 @@ education:
       skills, and operations management.
 
 experience:
+  - start_date: 2020-01-13
+    end_date: 2026-01-23
+    title: Principal Software Engineer
+    company: System Initiative
+    location: Distributed Team
+    url:
+      href: https://www.systeminit.com
+    description: |
+      Over 6 years as Principal Engineer and first employee hire, I contributed
+      to virtually all core systems at System Initiative in all parts of the
+      stack, with a special focus on distributed systems architecture,
+      messaging systems, and resilience.
+
+      Technologies: Rust
   - start_date: 2014-12-01
     end_date: 2019-03-01
     title: Principal Software Engineer
