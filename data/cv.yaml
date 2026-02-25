@@ -34,12 +34,38 @@ experience:
     url:
       href: https://www.systeminit.com
     description: |
-      Over 6 years as Principal Engineer and first employee hire, I contributed
-      to virtually all core systems at System Initiative in all parts of the
+      Contributed as first hire to virtually all core systems across the entire
       stack, with a special focus on distributed systems architecture,
-      messaging systems, and resilience.
+      messaging systems, and resilience. Helped grow the team to over 12
+      developers by participating with a very successful candidate hiring
+      process, mentoring junior members, and reviewing key systems designs.
 
-      Technologies: Rust
+      Authored several general purpose libraries and frameworks extracted from
+      developing patterns in the project including a NATS-based processing
+      middleware framework called _Naxum_, and a version and encoding-aware API
+      types library called _Acceptable API Types_.
+
+      Implemented a system to safeguard user-provided credentials with
+      end-to-end encryption and encryption at rest. Created a packaging format
+      for user-provided content (and associated dependencies) which used
+      cryptographically hashed n-ary Merkle trees with a structure similar to
+      Git objects.
+
+      Planned and executed the incremental replacement of a Makefile-based
+      build system with Meta's Buck2 (a fast, hermetic, multi-language build
+      system), being the first adoption of Buck2 in a nontrivially large open
+      sourced polyglot monorepo project. Wrote a dynamic test and build process
+      which used Buck2 queries to determine units of work to dispatch in the
+      continuous integration system during code review, merge, and deployment.
+
+      Designed, maintained, and evolved the observability and telemetry project
+      framework and infrastructure with special focus on service-spanning
+      tracing, multi-language support, dynamic runtime logging verbosity
+      levels, and a full local stack for development with tracing,
+      logging, and metrics.
+
+      Technologies: Rust, Tokio, Buck2, NATS, PostgreSQL, Honeycomb,
+      TypeScript, Deno, Python, SpiceDB
   - start_date: 2014-12-01
     end_date: 2019-03-01
     title: Principal Software Engineer
