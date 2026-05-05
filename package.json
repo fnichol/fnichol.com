@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build:css": "tailwindcss -i assets/css/input.css -o assets/css/vendor/tailwind-generated.css",
+    "watch:css": "tailwindcss -i assets/css/input.css -o assets/css/vendor/tailwind-generated.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4"
+  }
+}

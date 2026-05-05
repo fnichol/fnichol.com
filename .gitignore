@@ -1,2 +1,4 @@
 /public/
 /.worktrees/
+node_modules/
+assets/css/vendor/tailwind-generated.css

@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  /* Preserve Tachyons' exact pink (#ff80cc); Tailwind's pink-400 is #f472b6 */
+  --color-pink: #ff80cc;
+
+  /* Preserve Tachyons' avenir-first font stack */
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+    "helvetica neue", helvetica, ubuntu, roboto, noto,
+    "segoe ui", arial, sans-serif;
+}
+
+/* Description paragraphs from markdownify */
+#cv .description p {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+#cv blockquote {
+  border-left: thin solid rgba(0, 0, 0, 0.1);
+  margin-left: 0;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 1.5cm 2cm;
+  }
+
+  #cv {
+    padding: 0;
+    max-width: none;
+  }
+
+  #cv h1 {
+    font-size: 2.5rem;
+  }
+
+  #cv li {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    overflow: visible;
+  }
+
+  /* Float layout breaks when entries span page boundaries. Keep left column
+     as a float but make the right column a margin-based block so its content
+     retains its indent on continuation pages. */
+  #cv li > div:first-child {
+    float: left;
+    width: 33.333%;
+    break-inside: avoid; /* keep company name + date together in the float */
+  }
+
+  #cv li > div:first-child ~ div {
+    float: none;
+    width: auto;
+    margin-left: 33.333%;
+  }
+
+  /* Prevent job title from being orphaned at the bottom of a page without
+     the description that follows it. */
+  #cv li h4 {
+    break-after: avoid;
+  }
+
+}

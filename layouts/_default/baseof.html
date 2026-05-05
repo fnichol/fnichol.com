@@ -12,9 +12,8 @@
     {{ hugo.Generator }}
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
-    {{ $tach := resources.Get "css/vendor/tachyons-4.11.1.css" -}}
-    {{ $maincss := resources.Get "css/main.css" -}}
-    {{ $css := slice $tach $maincss | resources.Concat "css/style.css" | minify | fingerprint -}}
+    {{ $tw := resources.Get "css/vendor/tailwind-generated.css" -}}
+    {{ $css := $tw | minify | fingerprint -}}
     <link
       rel="stylesheet"
       href="{{ $css.RelPermalink }}"
