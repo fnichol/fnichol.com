@@ -8,6 +8,7 @@ command = "npm ci && npm run build:css && hugo --gc --minify"
 HUGO_VERSION = "0.161.1"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
+NODE_VERSION = "22"
 
 [context.deploy-preview]
 command = "npm ci && npm run build:css && hugo --gc --minify --buildFuture --baseURL $DEPLOY_PRIME_URL"
