@@ -6,9 +6,8 @@
 
   /* Preserve Tachyons' avenir-first font stack */
   --font-sans:
-    -apple-system, BlinkMacSystemFont, "avenir next", avenir,
-    "helvetica neue", helvetica, ubuntu, roboto, noto,
-    "segoe ui", arial, sans-serif;
+    -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue",
+    helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
 }
 
 /* Description paragraphs from markdownify */
@@ -39,31 +38,70 @@
     font-size: 2.5rem;
   }
 
-  #cv li {
+  /* Pin interest items to 1/3 width in print regardless of viewport width.
+     Firefox's print viewport sits close to the 640px sm: breakpoint, so
+     sm:w-1/3 may not trigger, leaving items full-width and making the section
+     far taller than intended — which pushes the Experience heading too low. */
+  #cv #interest li {
+    width: 33.333%;
+    float: left;
+  }
+
+  /* Two-column layout for print using absolute positioning for the left
+     (1/3) column. CSS Grid and float layouts are both unreliable for this
+     use case in Firefox's print engine:
+       - CSS Grid: Firefox treats grid containers as monolithic and cannot
+         fragment them across pages, causing long entries to be moved to the
+         next page entirely.
+       - Float: Firefox's fragmentation model treats a float and its sibling
+         block as independent elements, allowing them to end up on different
+         pages regardless of break property settings.
+     With position: absolute on the left column, the element is placed at its
+     computed position in the document layout and appears on whichever page
+     contains the <li>'s starting position — it cannot be delayed or moved
+     the way a float can. The right column is a normal block (margin-left)
+     whose content fragments freely across pages. */
+  #cv #experience li,
+  #cv #education li,
+  #cv #patents li,
+  #cv #awards li {
+    position: relative;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
     overflow: visible;
   }
 
-  /* Float layout breaks when entries span page boundaries. Keep left column
-     as a float but make the right column a margin-based block so its content
-     retains its indent on continuation pages. */
-  #cv li > div:first-child {
-    float: left;
+  #cv #experience li > div:first-child,
+  #cv #education li > div:first-child,
+  #cv #patents li > div:first-child,
+  #cv #awards li > div:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 33.333%;
-    break-inside: avoid; /* keep company name + date together in the float */
   }
 
-  #cv li > div:first-child ~ div {
+  #cv #experience li > div:first-child ~ div,
+  #cv #education li > div:first-child ~ div,
+  #cv #patents li > div:first-child ~ div,
+  #cv #awards li > div:first-child ~ div {
     float: none;
     width: auto;
     margin-left: 33.333%;
   }
 
-  /* Prevent job title from being orphaned at the bottom of a page without
-     the description that follows it. */
-  #cv li h4 {
-    break-after: avoid;
+  /* Keep the <ul> on the same page as the preceding section <h2>.
+     Targeting the <ul> (not li:first-child) is necessary: if Firefox moves
+     the entire <ul> to the next page, a break-before on the first <li>
+     cannot help since that break is before the <ul>, not inside it.
+     This previously had no effect because the grid <li> items were
+     monolithic — Firefox had no choice but to move the <ul> to avoid
+     overflow. Now that <li> items are normal fragmentable blocks, Firefox
+     can start the <ul> on the current page and fragment items as needed. */
+  #cv #experience > ul,
+  #cv #education > ul,
+  #cv #patents > ul,
+  #cv #awards > ul {
+    break-before: avoid;
   }
-
 }
